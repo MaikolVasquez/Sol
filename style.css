@@ -1,0 +1,276 @@
+body{
+  margin:0;
+  background: black;
+  background-repeat: no-repeat;
+}
+figure{
+  margin:0;
+}
+figure img{
+  position: fixed;
+  transition: 1s;
+}
+h1 {
+  color:white;
+  display: inline-block;
+  position:fixed;
+  opacity: 0;
+  transition: 1s;
+  font-size: 80px;
+}
+.titulos{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Merienda', cursive;
+}
+.conteiner{
+  position: relative;
+  height: 100vh;
+}
+.pluton{
+  opacity: 1;
+  width: 1200px;
+}
+.t_pluton{
+  opacity:1;
+  color: #572e28;
+}
+.neptuno{
+  opacity: 0;
+}
+.t_neptuno{
+  color: #0d9ef4;
+}
+.urano{
+  opacity: 0;
+  width:1100px;
+}
+.t_urano{
+  top:0;
+  color: #061920;
+}
+.saturno{
+  opacity: 0;
+  width:1000px;
+}
+.t_saturno{
+  font-size: 200px;
+  color: #829ab6;
+}
+.jupiter{
+  opacity: 0;
+  width:900px;
+}
+.t_jupiter{
+  bottom: 0;
+  font-size: 100px;
+  color: #7a563f;
+}
+.asteroides{
+  opacity: 0;
+  width:850px;
+}
+.t_asteroides{
+  top: 0;
+  color: #0d5063;
+}
+.marte{
+  opacity: 0;
+  width:800px;
+}
+.t_marte{
+  color: #fbd082;
+}
+.tierra{
+  opacity: 0;
+  height:100vh;
+}
+.t_tierra{
+  color:#0468B2;
+}
+.venus{
+  opacity: 0;
+  height: 100vh;
+}
+.t_venus{
+  color: #6f2d2d;
+}
+.mercurio{
+  opacity: 0;
+  height: 100vh;
+}
+.t_mercurio{
+  color: #080705;
+}
+.sol{
+  opacity: 0;
+  height: 100vh;
+}
+.t_sol{
+  color: #F3C054;
+}
+@media screen and (max-width: 1200px){
+  .pluton{
+    opacity: 0;
+  }
+  .neptuno{
+    opacity: 1;
+  }
+  .t_pluton{
+    transform:scale(5);
+    opacity: 0;
+  }
+  .t_neptuno{
+   transform: rotate(360deg);
+   opacity: 1;
+  }
+}
+@media screen and (max-width: 1100px){
+  .neptuno{
+    opacity: 0;
+  }
+  .urano{
+    opacity: 1;
+  }
+  .t_neptuno{
+    transform: scale(.1);
+    opacity: 0;
+  }
+  .t_urano{
+   transform: translateY(200px);
+   opacity: 1;
+  }
+}
+@media screen and (max-width: 1000px){
+  .urano{
+    opacity: 0;
+  }
+  .saturno{
+    opacity: 1;
+  }
+  .t_urano{
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  .t_saturno{
+   transform:scale(.5) translateY(-300px);
+   opacity: 1;
+  }
+}
+@media screen and (max-width: 900px){
+  .saturno{
+    opacity: 0;
+  }
+  .jupiter{
+    opacity: 1;
+  }
+  .t_saturno{
+    transform: skew(100deg);
+    opacity: 0;
+  }
+  .t_jupiter{
+   transform: scale(2) translateY(-100px);
+   opacity: 1;
+  }
+}
+@media screen and (max-width: 850px){
+  .jupiter{
+    opacity: 0;
+  }
+  .asteroides{
+    opacity: 1;
+  }
+  .t_jupiter{
+    transform: scale(5);
+    opacity: 0;
+  }
+  .t_asteroides{
+   transform:translateX(250px) translateY(250px) scale(.5);
+   opacity: 1;
+  }
+}
+@media screen and (max-width: 800px){
+  .asteroides{
+    opacity: 0;
+  }
+  .marte{
+    opacity: 1;
+  }
+  .t_asteroides{
+    transform: translateY(-300px) scale(.1);
+    opacity: 0;
+  }
+  .t_marte{
+   opacity: 1;
+   color:red;
+   transform: translateY(-200px);
+  }
+}
+@media screen and (max-width: 700px){
+  .marte{
+    opacity: 0;
+  }
+  .tierra{
+    opacity: 1;
+  }
+  .t_marte{
+    transform: translateX(-500px);
+    color:#fbd082;
+    opacity: 0;
+  }
+  .t_tierra{
+    transform:rotate(360deg) scale(1.5);
+   opacity: 1;
+  }
+}
+@media screen and (max-width: 600px){
+  .tierra{
+    opacity: 0;
+  }
+  .venus{
+    opacity: 1;
+  }
+  .t_tierra{
+    transform: translateY(-200px) scale(5);
+    opacity: 0;
+  }
+  .t_venus{
+   transform: scaleY(2) translateY(-100px);
+   opacity: 1;
+  }
+}
+@media screen and (max-width: 500px){
+  .venus{
+    opacity: 0;
+  }
+  .mercurio{
+    opacity: 1;
+  }
+  .t_venus{
+    transform: scaleX(2) scaleY(0.5);
+    opacity: 0;
+  }
+  .t_mercurio{
+   transform: scale(.4) translateY(-170px) translateX(20px);
+   opacity: 1;
+  }
+}
+@media screen and (max-width: 400px){
+  .mercurio{
+    opacity: 0;
+  }
+  .sol{
+    opacity: 1;
+  }
+  .t_mercurio{
+    transform: scale(5);
+    opacity: 0;
+  }
+  .t_sol{
+   transform: scale(2.9);
+   opacity: 1;
+  }
+}
