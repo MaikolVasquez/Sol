@@ -1,3 +1,5 @@
+const fetch = require('node-fetch')
+
 exports.handler = async (event, context) => {
   const data = fetch('https://api.chucknorris.io/jokes/random')
   .then(response => response.json())
