@@ -1,7 +1,12 @@
 exports.handler = async (event, context) => {
-    const { name = "Anonymous" } = event.queryStringParameters;
+  const data = fetch('https://api.chucknorris.io/jokes/random')
+  .then(response => response.json())
+  .then(data => {
+    return data
+  });
+
     return {
       statusCode: 200,
-      body: `Hello, ${name}`
+      body: JSON.stringify(data)
     };
   };
